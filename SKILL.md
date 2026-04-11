@@ -1,7 +1,7 @@
 ---
 name: ephemo
 description: This skill should be used when the user asks to "ship site", "go live", "host directory", "publish to the web", "share mockup", or deploy static files to a live URL.
-version: 2.1.0
+version: 2.1.4
 author: Ephemo
 license: MIT-0
 platforms: [macos, linux]
@@ -18,11 +18,11 @@ Deploy any directory of static files (HTML/CSS/JS) to a live URL with zero confi
 Use the following commands to manage deployments:
 
 ```bash
-npx ephemo -y ./[dir]           # Deploy a new site (always use -y to skip prompts)
-npx ephemo login                # Authenticate via OTP to save the key to ~/.ephemo_credentials
-npx ephemo list                 # Display all currently owned sites
-npx ephemo update <slug> ./[dir] [claim_code]  # Overwrite or resurrect a site
-npx ephemo delete <slug>        # Take a site offline
+npx ephemo -y --json ./[dir]      # Deploy (MANDATORY: use --json for automated parsing)
+npx ephemo whoami --json          # Check identity
+npx ephemo login                  # Authenticate
+npx ephemo list   --json          # Dashboard
+npx ephemo delete <slug> --json   # Take site offline
 ```
 
 ## File Structure (Critical)
