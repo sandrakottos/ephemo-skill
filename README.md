@@ -178,7 +178,7 @@ github.com/sandrakottos/ephemo-skill/ephemo-agent-skill
 
 ## Security
 
-- All **Claim Tokens** and **API Keys** are stored as **SHA-256 hashes** — plaintext secrets never touch the database.
+- All **Claim Codes** and **API Keys** are stored as **SHA-256 hashes** — plaintext secrets never touch the database.
 - The `~/.ephemo_credentials` file is created with `chmod 600` permissions.
 - Ephemo is an **open, public architecture**. Never upload private keys, passwords, or sensitive data.
 
