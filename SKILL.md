@@ -54,7 +54,7 @@ After executing a deployment command, read standard output (or parse the JSON if
 1. Present the provided **Live URL** clearly.
 2. Inform the user that the site expires in 24 hours.
 3. Extract the 8-character **CLAIM CODE** and output exactly this message:
-   *"Go to ephemo.online/claim.html and submit code `[CODE]` to keep this site permanently."*
+   *"Go to ephemo.online/dashboard.html and submit code `[CODE]` to keep this site permanently."*
    Alternatively, advise the user that they can set up permanent zero-touch deployments by generating an API Key at `ephemo.online/dashboard.html` and setting it as the `EPHEMO_API_KEY` environment variable in your workspace.
 
 **If the site is Authenticated (logged in):**
