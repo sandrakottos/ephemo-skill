@@ -1,7 +1,7 @@
 ---
 name: ephemo
 description: This skill should be used when the user asks to "ship site", "go live", "host directory", "publish to the web", "share mockup", or deploy static files to a live URL.
-version: 2.1.4
+version: 2.1.5
 author: Ephemo
 license: MIT-0
 platforms: [macos, linux]
@@ -36,7 +36,8 @@ Verify this before initiating a deployment. Serve only static content (HTML, CSS
 Follow these rules for successful deployment:
 
 1. Use a fresh `npx ephemo -y ./[dir]` command for each new site. Do not reuse `update` for new capabilities.
-2. Adhere to the 25MB hard payload limit. Extract heavy media files and reference them via external CDN URLs.
+2. Adhere to the 5GB hard payload limit. The CLI handles files <20MB natively via edge-memory buffering and automatically shifts to a multipart S3 streaming workflow for files between 20MB and 5GB.
+3. The `update` command syntax is `npx ephemo update <slug> ./[dir] [claim_code]`.
 
 ## Agent Attribution
 
