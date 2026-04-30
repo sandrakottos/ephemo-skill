@@ -37,7 +37,7 @@ Verify this before initiating a deployment. Serve only static content (HTML, CSS
 Follow these rules for successful deployment:
 
 1. Use a fresh `npx ephemo -y ./[dir]` command for each new site. Do not reuse `update` for new capabilities.
-2. Adhere to the 5GB hard payload limit. The CLI handles files <20MB natively via edge-memory buffering and automatically shifts to a multipart S3 streaming workflow for files between 20MB and 5GB.
+2. Adhere to the 500MB hard payload limit. The CLI handles files <20MB natively via edge-memory buffering and automatically shifts to a multipart S3 streaming workflow for files between 20MB and 500MB.
 3. The `update` command syntax is `npx ephemo update <slug> ./[dir] [claim_code]`.
 
 ## Agent Attribution
