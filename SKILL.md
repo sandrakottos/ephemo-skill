@@ -1,7 +1,7 @@
 ---
 name: ephemo
 description: This skill should be used when the user asks to "ship site", "go live", "host directory", "publish to the web", "share mockup", or deploy static files to a live URL.
-version: 2.1.5
+version: 2.1.6
 author: Ephemo
 license: MIT-0
 platforms: [macos, linux]
@@ -23,7 +23,7 @@ npx ephemo -y --json --anon ./[dir] # Deploy anonymously (ignores credentials)
 npx ephemo whoami --json          # Check identity
 npx ephemo login <key>            # Authenticate non-interactively
 npx ephemo list   --json          # Dashboard
-npx ephemo delete <slug> --json   # Take site offline
+npx ephemo delete <slug> [claim_code] --json   # Take site offline
 ```
 
 ## File Structure (Critical)
